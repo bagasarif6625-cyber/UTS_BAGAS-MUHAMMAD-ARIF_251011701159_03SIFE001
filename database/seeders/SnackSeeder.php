@@ -1,0 +1,238 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Snack;
+use Illuminate\Database\Seeder;
+
+class SnackSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $snacks = [
+            [
+                'brand' => 'Qtela',
+                'name' => 'Qtela Singkong',
+                'flavor' => 'Original',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'qtela/qtela original.jpg',
+                'description' => 'Keripik singkong Qtela dengan rasa original yang gurih dan renyah.',
+            ],
+            [
+                'brand' => 'Qtela',
+                'name' => 'Qtela Singkong',
+                'flavor' => 'Balado',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'qtela/qtela balado.jpg',
+                'description' => 'Keripik singkong Qtela dengan bumbu balado pedas manis.',
+            ],
+            [
+                'brand' => 'Qtela',
+                'name' => 'Qtela Singkong',
+                'flavor' => 'Barbecue',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'qtela/qtela barbeque.jpg',
+                'description' => 'Keripik singkong Qtela dengan bumbu barbecue gurih.',
+            ],
+            [
+                'brand' => 'Qtela',
+                'name' => 'Qtela Singkong',
+                'flavor' => 'Rumput Laut',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'qtela/qtela original.jpg',
+                'description' => 'Keripik singkong Qtela dengan perpaduan rasa rumput laut.',
+            ],
+            [
+                'brand' => "Lay's",
+                'name' => "Lay's Potato Chips",
+                'flavor' => 'Rumput Laut',
+                'price' => 15000,
+                'weight' => 68,
+                'image' => "lay's/lays rumput laut.jpg",
+                'description' => "Keripik kentang Lay's tipis dan renyah dengan rasa rumput laut.",
+            ],
+            [
+                'brand' => "Lay's",
+                'name' => "Lay's Potato Chips",
+                'flavor' => 'Cream and Onion',
+                'price' => 15000,
+                'weight' => 68,
+                'image' => "lay's/lays cream and onion.jpg",
+                'description' => "Keripik kentang Lay's dengan bumbu krim dan bawang gurih.",
+            ],
+            [
+                'brand' => "Lay's",
+                'name' => "Lay's Potato Chips",
+                'flavor' => 'Original',
+                'price' => 15000,
+                'weight' => 68,
+                'image' => "lay's/lays original.jpg",
+                'description' => "Keripik kentang Lay's dengan rasa original yang gurih.",
+            ],
+            [
+                'brand' => "Lay's",
+                'name' => "Lay's Potato Chips",
+                'flavor' => 'Barbecue',
+                'price' => 15000,
+                'weight' => 68,
+                'image' => "lay's/lays barbeque.jpg",
+                'description' => "Keripik kentang Lay's dengan bumbu barbecue.",
+            ],
+            [
+                'brand' => 'Chitato',
+                'name' => 'Chitato Potato Chips',
+                'flavor' => 'Sapi Panggang',
+                'price' => 14000,
+                'weight' => 68,
+                'image' => 'chitato/chitato sapi panggang.png',
+                'description' => 'Keripik kentang bergelombang Chitato dengan rasa sapi panggang.',
+            ],
+            [
+                'brand' => 'Chitato',
+                'name' => 'Chitato Potato Chips',
+                'flavor' => 'Keju',
+                'price' => 14000,
+                'weight' => 68,
+                'image' => 'chitato/ChitatoChijeu.png',
+                'description' => 'Keripik kentang bergelombang Chitato dengan rasa keju gurih.',
+            ],
+            [
+                'brand' => 'Chitato',
+                'name' => 'Chitato Potato Chips',
+                'flavor' => 'Rendang Sapi',
+                'price' => 14000,
+                'weight' => 68,
+                'image' => 'chitato/chitato rendang sapi.jpg',
+                'description' => 'Keripik kentang bergelombang Chitato dengan rasa rendang sapi.',
+            ],
+            [
+                'brand' => 'Chitato',
+                'name' => 'Chitato Potato Chips',
+                'flavor' => 'Ayam Bumbu',
+                'price' => 14000,
+                'weight' => 68,
+                'image' => 'chitato/ChitatoAyamBumbu.png',
+                'description' => 'Keripik kentang bergelombang Chitato dengan bumbu ayam gurih.',
+            ],
+            [
+                'brand' => 'Taro',
+                'name' => 'Taro Net',
+                'flavor' => 'Rumput Laut',
+                'price' => 10000,
+                'weight' => 65,
+                'image' => 'taro/taro net rumput laut.jpg',
+                'description' => 'Snack berbentuk jaring Taro dengan bumbu rumput laut.',
+            ],
+            [
+                'brand' => 'Taro',
+                'name' => 'Taro Net',
+                'flavor' => 'Potato BBQ',
+                'price' => 10000,
+                'weight' => 65,
+                'image' => 'taro/taro net potato bbq.jpg',
+                'description' => 'Snack berbentuk jaring Taro dengan rasa barbecue.',
+            ],
+            [
+                'brand' => 'Taro',
+                'name' => 'Taro Net',
+                'flavor' => 'Italian Pizza',
+                'price' => 10000,
+                'weight' => 65,
+                'image' => 'taro/taro net italian pizza.jpg',
+                'description' => 'Snack berbentuk jaring Taro dengan rasa pizza ala Italia.',
+            ],
+            [
+                'brand' => 'Taro',
+                'name' => 'Taro Net',
+                'flavor' => 'Cowboy Steak',
+                'price' => 10000,
+                'weight' => 65,
+                'image' => 'taro/taro net cowboy steak.jpg',
+                'description' => 'Snack berbentuk jaring Taro dengan rasa cowboy steak.',
+            ],
+            [
+                'brand' => 'Piattos',
+                'name' => 'Piattos',
+                'flavor' => 'Rumput Laut',
+                'price' => 10000,
+                'weight' => 68,
+                'image' => 'piattos/piattos rumput laut.png',
+                'description' => 'Keripik kentang bertekstur renyah dari Piattos dengan rasa rumput laut.',
+            ],
+            [
+                'brand' => 'Piattos',
+                'name' => 'Piattos',
+                'flavor' => 'Keju Pedas',
+                'price' => 10000,
+                'weight' => 68,
+                'image' => 'piattos/piattos keju pedas.png',
+                'description' => 'Keripik kentang bertekstur renyah dari Piattos dengan rasa keju pedas.',
+            ],
+            [
+                'brand' => 'Piattos',
+                'name' => 'Piattos',
+                'flavor' => 'Sambal Matah',
+                'price' => 10000,
+                'weight' => 68,
+                'image' => 'piattos/piattos sambal matah.png',
+                'description' => 'Keripik kentang bertekstur renyah dari Piattos dengan rasa sambal matah.',
+            ],
+            [
+                'brand' => 'Piattos',
+                'name' => 'Piattos',
+                'flavor' => 'Sapi Panggang',
+                'price' => 10000,
+                'weight' => 68,
+                'image' => 'piattos/piattos sapi panggang.png',
+                'description' => 'Keripik kentang bertekstur renyah dari Piattos dengan rasa sapi panggang.',
+            ],
+            [
+                'brand' => 'Kusuka',
+                'name' => 'Kusuka Keripik Singkong',
+                'flavor' => 'Super Pedas',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'kusuka/kusuka super pedas.png',
+                'description' => 'Keripik singkong Kusuka dengan rasa super pedas.',
+            ],
+            [
+                'brand' => 'Kusuka',
+                'name' => 'Kusuka Keripik Singkong',
+                'flavor' => 'Ghost Pepper',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'kusuka/kusuka ghost pepper.png',
+                'description' => 'Keripik singkong Kusuka dengan rasa ghost pepper yang sangat pedas.',
+            ],
+            [
+                'brand' => 'Kusuka',
+                'name' => 'Kusuka Keripik Singkong',
+                'flavor' => 'Barbeque',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'kusuka/kusuka barbeque.png',
+                'description' => 'Keripik singkong Kusuka dengan rasa barbecue gurih.',
+            ],
+            [
+                'brand' => 'Kusuka',
+                'name' => 'Kusuka Keripik Singkong',
+                'flavor' => 'Balado',
+                'price' => 12000,
+                'weight' => 60,
+                'image' => 'kusuka/kusuka balado.png',
+                'description' => 'Keripik singkong Kusuka dengan bumbu balado pedas manis.',
+            ],
+        ];
+
+        // Seeder ini mengganti seluruh katalog dengan daftar merek dan varian di bawah.
+        Snack::query()->delete();
+
+        foreach ($snacks as $snack) {
+            Snack::create($snack);
+        }
+    }
+}
