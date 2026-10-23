@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Katalog Makanan Kering')
+@section('title', 'BAVO SNACKVERSE')
 
 @section('content')
-    {{-- Banner utama --}}
     <div class="container">
         <section class="hero-banner">
             <img class="hero-image" src="{{ asset('assets/images/landscape.jpg') }}" alt="Aneka camilan renyah">

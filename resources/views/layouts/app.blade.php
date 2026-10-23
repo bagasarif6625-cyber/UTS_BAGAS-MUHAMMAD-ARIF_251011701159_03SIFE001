@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Katalog Makanan Kering')</title>
+    <title>@yield('title', 'BAVO SNACKVERSE')</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
@@ -61,9 +61,16 @@
                 <div class="col-6 col-md-3">
                     <h6 class="fw-semibold mb-3">Products</h6>
                     <ul class="list-unstyled small footer-links">
-                        <li><a href="{{ route('snacks.index') }}#produk">Keripik</a></li>
-                        <li><a href="{{ route('snacks.index') }}#produk">Kacang</a></li>
-                        <li><a href="{{ route('snacks.index') }}#produk">Aneka Gurih</a></li>
+                        @foreach ([
+                            'Chitato',
+                            "Lay's",
+                            'Piattos',
+                            'Taro',
+                            'Qtela',
+                            'Kusuka',
+                        ] as $brand)
+                            <li><a href="{{ route('snacks.brand', ['brand' => Illuminate\Support\Str::slug($brand)]) }}">{{ $brand }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-6 col-md-3">
@@ -79,7 +86,8 @@
                     <p class="small mb-0 footer-links">UTS Rekayasa Web<br>Sistem Informasi<br>Universitas Pamulang</p>
                 </div>
             </div>
-            <p class="text-center small footer-links mt-5 mb-0">Dosen Pengampu: Afif Efendi</p>
+            <p class="text-center small footer-links mt-5 mb-0"> Pembuat : Bagas Muhammad Arif</p>
+            <p class="text-center small footer-links  mb-0"> NIM : 251011701159</p>
         </div>
     </footer>
 
