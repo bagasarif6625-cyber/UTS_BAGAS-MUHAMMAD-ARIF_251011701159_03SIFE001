@@ -38,12 +38,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#kontak">Contact</a>
                     </li>
-                    <li class="nav-item d-none d-lg-block">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true">
-                            <circle cx="10" cy="10" r="7"></circle>
-                            <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
-                        </svg>
+                    <li class="nav-item">
+                        <form action="{{ route('snacks.index') }}" method="GET" class="d-flex gap-2 my-2 my-lg-0" role="search">
+                            <label class="visually-hidden" for="snack-search">Cari snack</label>
+                            <input id="snack-search" class="form-control" type="search" name="q"
+                                value="{{ request('q') }}" placeholder="Cari snack..." aria-label="Cari snack">
+                            <button class="btn btn-outline-dark" type="submit" aria-label="Cari">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="10" cy="10" r="7"></circle>
+                                    <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
+                                </svg>
+                            </button>
+                        </form>
                     </li>
                 </ul>
             </div>

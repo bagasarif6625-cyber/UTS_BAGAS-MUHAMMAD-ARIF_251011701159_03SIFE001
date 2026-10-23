@@ -51,8 +51,15 @@
                     &larr; Semua Snack
                 </a>
             @endif
-            <h2 class="section-title">{{ $selectedBrand ?? 'SEMUA SNACK' }}</h2>
-            <p class="section-sub">{{ $selectedBrand ? 'Pilih varian yang kamu suka' : 'Pilih camilan favoritmu' }}</p>
+            <h2 class="section-title">{{ $searchTerm ? 'HASIL PENCARIAN' : ($selectedBrand ?? 'SEMUA SNACK') }}</h2>
+            <p class="section-sub">
+                @if ($searchTerm)
+                    Hasil untuk "{{ $searchTerm }}"
+                    <a href="{{ route('snacks.index') }}#produk" class="ms-2">Hapus pencarian</a>
+                @else
+                    {{ $selectedBrand ? 'Pilih varian yang kamu suka' : 'Pilih camilan favoritmu' }}
+                @endif
+            </p>
 
             <div class="row row-cols-2 row-cols-lg-4 g-3 mt-3 justify-content-center">
                 @forelse ($snacks as $snack)
@@ -75,7 +82,7 @@
                     </div>
                 @empty
                     <div class="col-12">
-                        <p class="alert alert-info">Belum ada data snack.</p>
+                        <p class="alert alert-info">{{ $searchTerm ? 'Snack tidak ditemukan. Coba kata kunci lain.' : 'Belum ada data snack.' }}</p>
                     </div>
                 @endforelse
             </div>

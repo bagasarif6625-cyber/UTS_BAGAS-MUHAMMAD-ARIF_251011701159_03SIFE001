@@ -17,6 +17,7 @@ class SnackController extends Controller
 
         $requestedBrand = request('brand');
         $selectedBrand = $brands->contains($requestedBrand) ? $requestedBrand : null;
+        $searchTerm = trim((string) request('q', ''));
 
         $brandSnacks = Snack::query()
             ->whereIn('brand', $brands)
@@ -28,13 +29,22 @@ class SnackController extends Controller
             $snackQuery->where('brand', $selectedBrand);
         }
 
+        if ($searchTerm !== '') {
+            $snackQuery->where(function ($query) use ($searchTerm) {
+                $query->where('name', 'like', "%{$searchTerm}%")
+                    ->orWhere('brand', 'like', "%{$searchTerm}%")
+                    ->orWhere('flavor', 'like', "%{$searchTerm}%")
+                    ->orWhere('description', 'like', "%{$searchTerm}%");
+            });
+        }
+
         $snacks = $snackQuery
             ->orderByRaw('(id * 7) % 29')
             ->orderBy('id')
             ->paginate(8)
             ->withQueryString();
 
-        return view('snacks.index', compact('snacks', 'brands', 'brandSnacks', 'selectedBrand'));
+        return view('snacks.index', compact('snacks', 'brands', 'brandSnacks', 'selectedBrand', 'searchTerm'));
     }
 
     public function brand(string $slug)
